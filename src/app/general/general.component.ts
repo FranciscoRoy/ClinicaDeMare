@@ -22,11 +22,11 @@ export class GeneralComponent {
       this.usuarioTipo = 3;}  
     }
 
-    constructor(private navegacionService: NavegacionService) { }
+    constructor(private navegacionService: NavegacionService,) { }
     navegar(donde: number) {
       this.navegacionService.cambiarEstadoVentana(donde);
     }
-
+    
   ingresar(){
     switch(this.usuarioTipo){
       case 1:

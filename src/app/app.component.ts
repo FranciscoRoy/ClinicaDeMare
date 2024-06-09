@@ -16,12 +16,16 @@ export class AppComponent {
   usuarioNombre: string = "";
   usuarioEstado: boolean = false;
 
-  constructor(private paletaColorService: paletaColorService) { }
-
+  constructor(private paletaColorService: paletaColorService) {} 
   ngOnInit(): void {
     this.paletaColorService.colorPalette$.subscribe(paleta => {
       this.paletaColorService.aplicarColores(paleta);
     });
   }
 
+  
+  
+
+
 }
+
