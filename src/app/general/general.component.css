@@ -6,6 +6,16 @@
     background-color: #0072BB;
   }
   
+  .container {
+    text-align: center; /* Centra el texto en el contenedor */
+  }
+  
+  .form-select {
+    text-align-last: center; /* Centra el texto del selector en la última línea */
+    width: 100%; /* Asegura que el selector ocupe todo el ancho del contenedor */
+    margin-bottom: 20px; /* Añade un margen inferior para separar el selector de los botones */
+  }
+
   .button-container {
     display: flex;
     flex-direction: column;

@@ -1,7 +1,11 @@
 
 <p>{{titulo}}</p>
-@if (usuarioEstado == false){
-    <app-general></app-general>
-}@else{
-    <app-inicio></app-inicio>
+
+@switch(ventanaEstado){
+    @case (0) {<app-general></app-general>}
+    @case (1) {<app-inicio></app-inicio>}
+    @case (2) {<app-ingreso></app-ingreso>}
+    @case (3) {<app-registro></app-registro>}
+    @default {<app-error></app-error>}
+
 }
