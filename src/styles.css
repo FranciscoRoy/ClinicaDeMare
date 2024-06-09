@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #0072BB; /* Azul Francia */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Hace que el cuerpo ocupe toda la altura de la ventana */
+    font-family: Arial, sans-serif;
+    color: white; /* Opcional: para cambiar el color del texto si lo necesitas */
+  }
