@@ -2,11 +2,11 @@
 <p>{{titulo}}</p>
 
 @switch(ventanaEstado){
-    @case (0) {<app-general></app-general>}
-    @case (1) {<app-inicio></app-inicio>}
-    @case (2) {<app-ingreso></app-ingreso>}
-    @case (3) {<app-registro></app-registro>}
-    @default {<app-error></app-error>}
+    @case (0) {<app-general class="main"></app-general>}
+    @case (1) {<app-inicio class="main"></app-inicio>}
+    @case (2) {<app-ingreso class="main"></app-ingreso>}
+    @case (3) {<app-registro class="main"></app-registro>}
+    @default {<app-error class="main"></app-error>}
 
 }
 
