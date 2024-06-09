@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --opcion: #00a1c9;
+  --opcionseleccion: #e7f5ff;
+  --fondo: #0072BB;
+  --texto: #000000;
+  --textoseleccionado: #3a3a3a;
+  --bordes: #b6b6b6;
+}
+
+body {
+  background-color: var(--fondo);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Hace que el cuerpo ocupe toda la altura de la ventana */
+  font-family: Arial, sans-serif;
+  color: var(--texto); /* Opcional: para cambiar el color del texto si lo necesitas */
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh; /* Hace que el contenedor ocupe el 50% de la altura de la ventana */
+  background-color: var(--fondo);
+
+  text-align: center; /* Centra el texto en el contenedor */
+
+}
+
+.form-select {
+  text-align-last: center; /* Centra el texto del selector en la última línea */
+  width: 100%; /* Asegura que el selector ocupe todo el ancho del contenedor */
+  margin-bottom: 20px; /* Añade un margen inferior para separar el selector de los botones */
+}
+
+.button-container {
+ display: flex;
+  flex-direction: column;
+  align-items: stretch; /* Hace que los elementos secundarios se estiren para llenar el contenedor */
+  gap: 10px;
+  min-width: 200px; /* O un ancho mínimo apropiado según tu diseño */
+}
+  
+.btn {
+  flex: 1; /* Hace que cada botón se estire uniformemente */
+  white-space: nowrap; /* Evita que el texto se envuelva */
+  background-color: var(--opcion);
+  color: var(--texto);
+}

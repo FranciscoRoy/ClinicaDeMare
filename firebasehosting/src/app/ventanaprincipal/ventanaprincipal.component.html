@@ -1,0 +1,14 @@
+
+<p>{{titulo}}</p>
+
+@switch(ventanaEstado){
+    @case (0) {<app-general class="main"></app-general>}
+    @case (1) {<app-inicio class="main"></app-inicio>}
+    @case (2) {<app-ingreso class="main" [usuarioTipo]="usuarioTipo"></app-ingreso>}
+    @case (3) {<app-registro class="main" [usuarioTipo]="usuarioTipo"></app-registro>}
+    @case (6) {<app-mostrarperfil class="main"></app-mostrarperfil>}
+    @case (7) {<app-colores class="main"></app-colores>}
+    @default {<app-error class="main"></app-error>}
+
+}
+
