@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "clinicaDeMare": {
+    "clinicademare": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -59,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "clinicaDeMare:build:production"
+              "buildTarget": "clinicademare:build:production"
             },
             "development": {
-              "buildTarget": "clinicaDeMare:build:development"
+              "buildTarget": "clinicademare:build:development"
             }
           },
           "defaultConfiguration": "development"
