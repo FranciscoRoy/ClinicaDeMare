@@ -1,6 +1,0 @@
-.error-image {
-    display: flex;
-    flex-direction: column;
-    height: 75vh; /* Asegura que el contenedor principal ocupe 75% de la ventana */
-    width: 65vh; /*Ocupa el 65% del ancho de la ventana*/
-}
