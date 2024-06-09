@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavegacionService } from '../servicios/navegacion.service';
 
 @Component({
   selector: 'app-menu',
@@ -9,4 +10,9 @@ import { Component } from '@angular/core';
 })
 export class MenuComponent {
 
+  constructor(private navegacionService: NavegacionService) { }
+    navegar(donde: number) {
+      this.navegacionService.cambiarEstadoVentana(donde);
+  }
+  
 }

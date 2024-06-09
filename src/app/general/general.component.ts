@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavegacionService } from '../navegacion.service';
+import { NavegacionService } from '../servicios/navegacion.service';
 
 @Component({
   selector: 'app-general',

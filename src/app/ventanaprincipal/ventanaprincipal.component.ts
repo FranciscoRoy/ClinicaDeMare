@@ -4,14 +4,15 @@ import { InicioComponent } from "../inicio/inicio.component";
 import { IngresoComponent } from '../ingreso/ingreso.component';
 import { RegistroComponent } from '../registro/registro.component';
 import { ErrorComponent } from '../error/error.component';
-import { NavegacionService } from '../navegacion.service';
+import { NavegacionService } from '../servicios/navegacion.service';
+import { ColoresComponent } from '../colores/colores.component';
 
 @Component({
     selector: 'app-ventanaprincipal',
     standalone: true,
     templateUrl: './ventanaprincipal.component.html',
     styleUrl: './ventanaprincipal.component.css',
-    imports: [GeneralComponent, InicioComponent, IngresoComponent, RegistroComponent, ErrorComponent]
+    imports: [GeneralComponent, InicioComponent, IngresoComponent, RegistroComponent, ErrorComponent, ColoresComponent]
 })
 
 export class VentanaprincipalComponent{
