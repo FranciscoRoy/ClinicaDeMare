@@ -17,13 +17,16 @@ import { MostrarperfilComponent } from "../mostrarperfil/mostrarperfil.component
 })
 
 export class VentanaprincipalComponent{
-  @Input() usuarioEstado: boolean = false;
+  @Input() usuarioTipo: number = 0;
   ventanaEstado: number = 0;
   
   constructor(private navegacionService: NavegacionService) { }
   ngOnInit(): void {
     this.navegacionService.estadoVentana$.subscribe(estado => {
       this.ventanaEstado = estado;
+    });
+    this.navegacionService.tipoUsuario$.subscribe(tipo => {
+      this.usuarioTipo = tipo;
     });
   }
 

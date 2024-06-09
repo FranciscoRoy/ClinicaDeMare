@@ -23,37 +23,17 @@ export class GeneralComponent {
     }
 
     constructor(private navegacionService: NavegacionService,) { }
-    navegar(donde: number) {
+    navegar(donde: number, como: number) {
+      this.navegacionService.cambiarTipoUsuario(como);
       this.navegacionService.cambiarEstadoVentana(donde);
     }
     
   ingresar(){
-    switch(this.usuarioTipo){
-      case 1:
-        this.navegar(2);
-        return;
-      case 2:
-        this.navegar(2);
-        return;
-      case 3:
-        this.navegar(2);
-        return;
-      default:
-        this.navegar(4); /*mensaje error*/
-        return;
-   }
+    this.navegar(2,this.usuarioTipo);
   }
 
   registrarse(){
-    if (this.usuarioTipo ==1){
-      this.navegar(3);
-    }
-    else if(this.usuarioTipo ==2){
-      this.navegar(3);
-    }
-    else if(this.usuarioTipo ==3){
-      this.navegar(3);
-    }
+    this.navegar(3,this.usuarioTipo);
   }
 
   salir(){
