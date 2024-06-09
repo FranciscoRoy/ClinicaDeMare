@@ -4,7 +4,7 @@ import { InicioComponent } from "../inicio/inicio.component";
 import { IngresoComponent } from '../ingreso/ingreso.component';
 import { RegistroComponent } from '../registro/registro.component';
 import { ErrorComponent } from '../error/error.component';
-
+import { NavegacionService } from '../navegacion.service';
 
 @Component({
     selector: 'app-ventanaprincipal',
@@ -16,10 +16,16 @@ import { ErrorComponent } from '../error/error.component';
 
 export class VentanaprincipalComponent{
   @Input() usuarioEstado: boolean = false;
-  @Input() ventanaEstado: number = 0;
+  ventanaEstado: number = 0;
   
+  constructor(private navegacionService: NavegacionService) { }
+  ngOnInit(): void {
+    this.navegacionService.estadoVentana$.subscribe(estado => {
+      this.ventanaEstado = estado;
+    });
+  }
+
   titulo: string = "TITULO DE PRUEBA";
-  
   cambiarTitulo(nuevoTitulo: string){
     this.titulo = nuevoTitulo;
   }

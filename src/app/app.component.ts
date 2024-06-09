@@ -14,9 +14,4 @@ import { VentanaprincipalComponent } from './ventanaprincipal/ventanaprincipal.c
 export class AppComponent {
   usuarioNombre: string = "";
   usuarioEstado: boolean = false;
-  ventanaEstado: number = 0;
-
-  cambiarEstadoVentana(nuevoEstado: number){
-    this.ventanaEstado = nuevoEstado;
-  }
 }

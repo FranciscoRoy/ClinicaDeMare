@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavegacionService } from '../navegacion.service';
 
 @Component({
   selector: 'app-general',
@@ -21,27 +22,37 @@ export class GeneralComponent {
       this.usuarioTipo = 3;}  
     }
 
+    constructor(private navegacionService: NavegacionService) { }
+    navegar(donde: number) {
+      this.navegacionService.cambiarEstadoVentana(donde);
+    }
+
   ingresar(){
-    if (this.usuarioTipo ==1){
-      alert("Menu de login de pacientes");
-    }
-    else if(this.usuarioTipo ==2){
-      alert("Menu de login de profesionales");
-    }
-    else if(this.usuarioTipo ==3){
-      alert("Menu de login de gerentes");
-    }
+    switch(this.usuarioTipo){
+      case 1:
+        this.navegar(2);
+        return;
+      case 2:
+        this.navegar(2);
+        return;
+      case 3:
+        this.navegar(2);
+        return;
+      default:
+        this.navegar(4); /*mensaje error*/
+        return;
+   }
   }
 
   registrarse(){
     if (this.usuarioTipo ==1){
-      alert("Menu de registro de pacientes");
+      this.navegar(3);
     }
     else if(this.usuarioTipo ==2){
-      alert("Menu de registro de profesionales");
+      this.navegar(3);
     }
     else if(this.usuarioTipo ==3){
-      alert("Menu de registro de gerentes");
+      this.navegar(3);
     }
   }
 
