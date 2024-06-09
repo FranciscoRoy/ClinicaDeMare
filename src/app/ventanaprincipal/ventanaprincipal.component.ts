@@ -6,13 +6,14 @@ import { RegistroComponent } from '../registro/registro.component';
 import { ErrorComponent } from '../error/error.component';
 import { NavegacionService } from '../servicios/navegacion.service';
 import { ColoresComponent } from '../colores/colores.component';
+import { MostrarperfilComponent } from "../mostrarperfil/mostrarperfil.component";
 
 @Component({
     selector: 'app-ventanaprincipal',
     standalone: true,
     templateUrl: './ventanaprincipal.component.html',
     styleUrl: './ventanaprincipal.component.css',
-    imports: [GeneralComponent, InicioComponent, IngresoComponent, RegistroComponent, ErrorComponent, ColoresComponent]
+    imports: [GeneralComponent, InicioComponent, IngresoComponent, RegistroComponent, ErrorComponent, ColoresComponent, MostrarperfilComponent]
 })
 
 export class VentanaprincipalComponent{
