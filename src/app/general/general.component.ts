@@ -10,7 +10,7 @@ import { NavegacionService } from '../servicios/navegacion.service';
 })
 
 export class GeneralComponent {
-  usuarioTipo: number = 0;
+  usuarioTipo: number = 1;
 
   mostrarOpcionSeleccionada(event: any): void {
     const opcionSeleccionada = event.target.value;
