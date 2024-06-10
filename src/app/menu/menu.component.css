@@ -1,0 +1,17 @@
+.bg-body-tertiary {
+    background-color: var(--fondo);
+  }
+  
+  .navbar-nav .nav-link {
+    background-color: var(--fondo);
+    color: var(--texto);
+  }
+  
+  .navbar-nav .nav-link:hover {
+    background-color: var(--fondo);
+    color: var(--opcionseleccion);
+  }
+
+  .container-fluid{
+    background-color: var(--fondo);
+  }

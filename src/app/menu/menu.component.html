@@ -8,39 +8,39 @@
       <ul class="navbar-nav">
 
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#" (click)="navegar(0)">INICIO</a>
+          <a class="nav-link active" aria-current="page" href="#" (click)="navegar(0,this.usuarioTipo)">INICIO</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#" (click)="navegar(-1)">TURNOS</a>
+          <a class="nav-link active" aria-current="page" href="#" (click)="navegar(-1,this.usuarioTipo)">TURNOS</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#" (click)="navegar(-1)">Mi Historial (paciente)</a>
+          <a class="nav-link active" aria-current="page" href="#" (click)="navegar(-1,this.usuarioTipo)">Mi Historial (paciente)</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#" (click)="navegar(-1)">Pacientes (profesional)</a>
+          <a class="nav-link active" aria-current="page" href="#" (click)="navegar(-1,this.usuarioTipo)">Pacientes (profesional)</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#" (click)="navegar(-1)">Reportes (profe y ger))</a>
+          <a class="nav-link active" aria-current="page" href="#" (click)="navegar(-1,this.usuarioTipo)">Reportes (profe y ger))</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#" (click)="navegar(-1)">Administrar (gerente)</a>
+          <a class="nav-link active" aria-current="page" href="#" (click)="navegar(-1,this.usuarioTipo)">Administrar (gerente)</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#" (click)="navegar(6)">PERFIL</a>
+          <a class="nav-link active" aria-current="page" href="#" (click)="navegar(6,this.usuarioTipo)">PERFIL</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#" (click)="navegar(7)">COLORES</a>
+          <a class="nav-link active" aria-current="page" href="#" (click)="navegar(7,this.usuarioTipo)">COLORES</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#" (click)="navegar(0)" >SALIR</a> <!--debe ejecutar usuario deslogueo-->
+          <a class="nav-link active" aria-current="page" href="#" (click)="navegar(0,this.usuarioTipo)" >SALIR</a> <!--debe ejecutar usuario deslogueo-->
         </li>
 
       </ul>
