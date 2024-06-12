@@ -25,16 +25,20 @@ export class RegistroComponent{
         return 'Desconocido';
     }
   }
+  /*estas variables provenien del servicio usuarios, supongo*/
+  datosUsuario: Usuarios = {
+    nombre: '',
+    apellido: '',
+    dni: 0,
+    email: '',
+    password: ''
+  };
 
-  listaUsuarios:Usuarios[]=[];
-  public usuario:Usuarios = {nombre:'',apellido:'',dni:0,email: '', password: ''};
 
-  registrarUsuario() {
-    this.listaUsuarios.push(this.usuario);
-    localStorage.setItem('datosUsuarios',JSON.stringify(this.listaUsuarios));
-    alert('Registrado Exitosamente');
-    this.navegar(2,this.usuarioTipo);
+  insertar(){
+    console.log(this.datosUsuario);
   }
+
 
   constructor(private navegacionService: NavegacionService,) { }
   navegar(donde: number, como: number) {
