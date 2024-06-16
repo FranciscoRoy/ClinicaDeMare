@@ -2,6 +2,11 @@ import { Component, Input} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Usuarios } from '../entidades/usuarios';
 import { NavegacionService } from '../servicios/navegacion.service';
+import { HttpClient } from '@angular/common/http';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { provideFirestore, getFirestore, Firestore } from '@angular/fire/firestore';
+import { environment } from '../environments/environment';
+import { ConexionFirestoreService } from '../servicios/conexion-firestore.service';
 
 @Component({
   selector: 'app-registro',
@@ -25,6 +30,7 @@ export class RegistroComponent{
         return 'Desconocido';
     }
   }
+
   /*estas variables provenien del servicio usuarios, supongo*/
   datosUsuario: Usuarios = {
     nombre: '',
@@ -34,13 +40,7 @@ export class RegistroComponent{
     password: ''
   };
 
-
-  insertar(){
-    console.log(this.datosUsuario);
-  }
-
-
-  constructor(private navegacionService: NavegacionService,) { }
+  constructor(private navegacionService: NavegacionService, private conexionFirestore: ConexionFirestoreService) { }
   navegar(donde: number, como: number) {
     this.navegacionService.cambiarTipoUsuario(como);
     this.navegacionService.cambiarEstadoVentana(donde);
