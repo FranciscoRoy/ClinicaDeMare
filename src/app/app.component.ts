@@ -13,7 +13,7 @@ import { paletaColorService } from './servicios/paleta-color.service';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  usuarioTipo: number = 0;
+  usuarioTipo: number = 1;
 
   constructor(private paletaColorService: paletaColorService) {} 
   ngOnInit(): void {
